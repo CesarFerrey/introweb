@@ -37,6 +37,9 @@
     color: #444;
     font-weight: bold;
   }
+figure{
+  display: inline-block;
+}
   
   /* Hero (Inicio) */
   .hero {
