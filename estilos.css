@@ -7,15 +7,15 @@
   
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fdf6fb;
-    color: #333;
+    background-color: #f1e7ef;
+    color: #181717;
     line-height: 1.6;
     padding: 10px;
   }
   
   /* Header */
   header {
-    background-color: #749ae057;
+    background-color: #648edd57;
     padding: 20px;
     text-align: center;
   }
@@ -55,7 +55,7 @@
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
-    background-color: #ff69b4;
+    background-color: #bd809f;
     color: white;
     border-radius: 25px;
     text-decoration: none;
@@ -99,7 +99,8 @@
   footer {
     text-align: center;
     padding: 15px;
-    background-color: #ffccf2;
+    background-color: #648edd57;
+    background-color: ;
     margin-top: 30px;
   }
   main section h1,h3, h3+p{
