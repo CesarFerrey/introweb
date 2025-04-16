@@ -7,8 +7,8 @@
   
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fdf6fb;
-    color: #333;
+    background-color: #f1e7ef;
+    color: #181717;
     line-height: 1.6;
     padding: 10px;
     text-align: center;
@@ -16,7 +16,7 @@
   
   /* Header */
   header {
-    background-color: #ffccf2;
+    background-color: #648edd57;
     padding: 20px;
     text-align: center;
   }
@@ -55,7 +55,7 @@
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
-    background-color: #ff69b4;
+    background-color: #bd809f;
     color: white;
     border-radius: 25px;
     text-decoration: none;
@@ -99,7 +99,46 @@
   footer {
     text-align: center;
     padding: 15px;
-    background-color: #ffccf2;
+    background-color: #648edd57;
+    background-color: #f4d7ec;
     margin-top: 30px;
   }
+  main section h1,h3, h3+p{
+    text-align: center;
+    
+  }
+  main section{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    background-color: #f4d7ec;
+    color: black;
+    padding: 10px 2%;
+    margin-bottom: 10px;
+  }
+  section ol{
+    margin-left: 6%;
+  }
+  section ol li{
+    text-align: center;
+    display: inline-block;
+    width: 45%;
+    margin:5px 1%;
+  }
+ figcaption{
+  margin: 15px auto;
+ }
+  img{
+    max-width: 100%;
+    min-height: 550px;
+    
+  }
+  img:hover{
+    border-color: aqua;
+    border-style: solid;
+  }
+  .desc-serv{
+    background-color: #ccc;
+    font-style: italic;
+  }
+
   
