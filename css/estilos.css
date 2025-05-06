@@ -14,9 +14,10 @@
     text-align: center;
   }
   
-  /* Header */
+  /*=================Header======================== */
   header {
     background-color: #648edd57;
+    color: #464343;
     padding: 20px;
     text-align: center;
   }
@@ -25,17 +26,53 @@
     font-size: 2rem;
     margin-bottom: 10px;
   }
+
+  .header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header li a :hover {
+    text-decoration: underline;
+  }
   
+/*==================NAV=====================================*/
+
+nav {
+  display: flex;
+  justify-content: center
+}
+
   nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    padding: 0;
+    margin: 0;
     gap: 20px;
   }
   
+  /* Hecho X Joa
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }*/
+
+   nav li {
+   align-items: center;
+   text-decoration: none;
+   font-weight: bold;
+  }
+
   nav a {
+    color :#5c595a;
+    transition: color 0.3s ease;
     text-decoration: none;
-    color: #444;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+    color: #c503bb;
     font-weight: bold;
   }
   
