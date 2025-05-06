@@ -52,17 +52,17 @@ nav {
     gap: 20px;
   }
   
-  /* Hecho X Joa
   nav li {
     display: inline-block;
+    font-weight: bold;
     margin: 0 10px;
-  }*/
+  }
 
-   nav li {
+   /*nav li {
    align-items: center;
    text-decoration: none;
    font-weight: bold;
-  }
+  }*/
 
   nav a {
     color :#5c595a;
