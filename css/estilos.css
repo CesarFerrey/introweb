@@ -332,7 +332,7 @@ nav {
   section ol{
     margin-left: 6%;
   }
-  section ol li{
+  section figure{
     text-align: center;
     display: inline-block;
     width: 45%;
