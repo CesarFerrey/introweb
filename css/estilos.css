@@ -4,10 +4,11 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+  /*====================Body====================*/
+
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f1e7ef;
+    background-color: #e9f1e7;
     color: #181717;
     line-height: 1.6;
     padding: 10px;
@@ -16,38 +17,32 @@
   
   /*=================Header======================== */
   
-  /*header {
-    background-image: url(../Imagenes/Portada.webp);
+  header {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url(../Imagenes/pasteles.jpg);
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #464343;
     padding: 20px;
     text-align: center;
-    height: 200px;
-}*/
-
-header {
-  background-image: url(../Imagenes/muro.webp);
-  background-size: cover; /* Ajusta la imagen para que cubra todo el área */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-color:transparent;
-  color: #464343;
-  padding: 20px;
-  text-align: center;
-  height: 300px;
-  opacity: 3.0;
-
+    height: 300%;
 }
-  
+
   header h1 {
     font-size: 2rem;
     margin-bottom: 10px;
   }
 
-  .header.container {
+  .header-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+    gap: 20px; /* Espaciado entre el título y el nav */
+}
 
   header li a :hover {
     text-decoration: underline;
@@ -59,13 +54,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding:10px;
 }
 
   nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
     gap: 20px;
@@ -73,18 +67,13 @@ nav {
   
   nav li {
     display: inline-block;
-    font-weight: bold;
-    margin: 0 10px;
+    margin: 0;
   }
 
-   /*nav li {
-   align-items: center;
-   text-decoration: none;
-   font-weight: bold;
-  }*/
 
   nav a {
     color :#5c595a;
+    font-weight: bold;
     transition: color 0.3s ease;
     text-decoration: none;
   }
@@ -92,7 +81,6 @@ nav {
   nav a:hover {
     text-decoration: underline;
     color: #c503bb;
-    font-weight: bold;
   }
   
   /* Hero (Inicio) */
@@ -356,15 +344,21 @@ nav {
   img{
     max-width: 100%;
     min-height: 550px;
-    
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición suave para efectos */
   }
   img:hover{
     border-color: aqua;
     border-style: solid;
   }
-  .desc-serv{
-    background-color: #ccc;
-    font-style: italic;
-  }
+  .desc-serv {
+    background-color: #c2def5; /* Fondo morado claro */
+    font-style: normal; /* Fuente normal */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    color: #333; /* Color del texto */
+    text-align: justify; /* Justifica el texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
 
   
