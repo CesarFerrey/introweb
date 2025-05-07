@@ -15,12 +15,28 @@
   }
   
   /*=================Header======================== */
-  header {
-    background-color: #648edd57;
+  
+  /*header {
+    background-image: url(../Imagenes/Portada.webp);
     color: #464343;
     padding: 20px;
     text-align: center;
-  }
+    height: 200px;
+}*/
+
+header {
+  background-image: url(../Imagenes/muro.webp);
+  background-size: cover; /* Ajusta la imagen para que cubra todo el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-color:transparent;
+  color: #464343;
+  padding: 20px;
+  text-align: center;
+  height: 300px;
+  opacity: 3.0;
+
+}
   
   header h1 {
     font-size: 2rem;
@@ -41,7 +57,10 @@
 
 nav {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding:10px;
 }
 
   nav ul {
