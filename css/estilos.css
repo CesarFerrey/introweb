@@ -336,9 +336,11 @@ nav {
     width: 100%;
     margin:5px 1%;
   }
+
  figcaption{
   margin: 15px auto;
  }
+ 
   img{
     max-width: 100%;
  
@@ -366,5 +368,17 @@ nav {
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 16px;
   align-items: center;
+}
+
+#catalogo-salones img {
+  width: 300px; /* Ancho fijo */
+  height: 200px; /* Alto fijo */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+  transition: transform 0.3s ease; /* Transición suave para efectos */
+}
+
+#catalogo-salones img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
   
