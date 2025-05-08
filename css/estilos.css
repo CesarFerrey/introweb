@@ -339,6 +339,7 @@ nav {
 
  figcaption{
   margin: 15px auto;
+  
  }
  
   img{
@@ -359,7 +360,7 @@ nav {
     padding: 15px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
     color: #333; /* Color del texto */
-    text-align: justify; /* Justifica el texto */
+    text-align: center; /* Justifica el texto */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
