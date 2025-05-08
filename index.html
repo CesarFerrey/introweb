@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salón de fiestas infantiles ENTRE AMIGOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilos.css" />
   </head>
 <body>
@@ -34,72 +35,91 @@
             <p>Consulte por la opción que más se ajuste a sus necesidades!</p>
         </section>
 
-        <section id="catalogo-salones">
-            <figure>
-                <figcaption><strong>"Universo bajito"</strong>
-                    <p>Av. Acoyte 82 (Caballito)</p>
-                </figcaption>  
-                <img src="./Imagenes/Salon1.jpg" alt="Universo bajito">
-                <p class="desc-serv">Capacidad para 50 personas, incluye dos animadores.<br>
-                    Inflable y metegol.Tobogán luminoso. <br>
-                    Souvenirs individuales.</p>
-            </figure>
-        
-            <figure>
-                <figcaption><strong>"Luna llena" </strong>
-                    <p>Campana 2959 (Villa del Parque)</p>
-                </figcaption>
-                <img src="./Imagenes/Salon2.webp" alt="Luna llena">
-                <p class="desc-serv">Capacidad para 80 personas, incluye dos animadores. <br>
-                    Actividades recreativas y shows de magia. Pelotero libre.<br>
-                    Sorpresitas a base de golosinas.<br>
-            </figure>
-        
-            <figure>
-                <figcaption><strong>"Aventura cósmica"</strong>
-                    <p>Av. San Martín 3582 (Paternal)</p>
-                </figcaption>
-                <img src="./Imagenes/8-salon-defabula.png" alt="Aventura cósmica">
-                <p class="desc-serv"> Capacidad para 100 personas, incluye juegos de agua y aire libre.<br>
-                    Tres animadores. Actividades didácticas.<br>
-                    Sorpresitas a base de golosinas<br>
-                </p>
-            </figure>
-    
-        <figure>
-            <figcaption><strong>"Jardín de estrellas"</strong>
-                <p>V. Gomez 3706 (Almagro)</p>
-            </figcaption>
-            <img src="./Imagenes/a-los-canos-cumpleanos-infantil.webp" alt="Jardín	de estrellas">
-            <p class="desc-serv">Capacidad para 150 personas, taller de arte,  y actividades guiadas.<br>
-                Cuatro animadores. Toro mecánico. Pista de baile.<br>
-                Souvenirs personalizados<br>
-            </p>
-        </figure>
-                
-    
-        <figure>
-            <figcaption><strong>"Jungla de diversión"</strong>
-                <p>Talcahuano 1225 (Barrio Norte)</p>
-            </figcaption>
-            <img src="./Imagenes/selva.jpg" alt="Jungla de diversión">
-            <p class="desc-serv">Capacidad para 180 personas, sala de juegos interactivos, fútbol y pelotero.<br>
-                Cinco animadores. Laberinto en altura. <br>
-                Souvenirs personalizados<br>
-            </p>
-        </figure>
-    
-        <figure>
-            <figcaption><strong>"Mundo mágico"</strong>
-                <p>Lafinur 2082 (Palermo)</p>
-            </figcaption>
-            <img src="./Imagenes/maquillaje.jpg" alt="Mundo mágico">
-            <p class="desc-serv">Capacidad para 200 personas, maquillaje artístico, disfraces.<br>
-                Cinco animadores. Consola musical.<br>
-                Souvenirs personalizados<br>
-            </p>
-        </figure>
-    
+       <section id="catalogo-salones">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <figure>
+                            <figcaption><strong>"Universo bajito"</strong>
+                                <p>Av. Acoyte 82 (Caballito)</p>
+                            </figcaption>  
+                            <img src="./Imagenes/Salon1.jpg"  class="d-block w-100" alt="Universo bajito">
+                            <p class="desc-serv">Capacidad para 50 personas, incluye dos animadores.<br>
+                                Inflable y metegol.Tobogán luminoso. <br>
+                                Souvenirs individuales.</p>
+                        </figure>
+                    
+                    </div>
+                    <div class="carousel-item">
+                        <figure>
+                            <figcaption><strong>"Luna llena" </strong>
+                                <p>Campana 2959 (Villa del Parque)</p>
+                            </figcaption>
+                            <img src="./Imagenes/Salon2.webp"class="d-block w-100" alt="Luna llena">
+                            <p class="desc-serv">Capacidad para 80 personas, incluye dos animadores. <br>
+                                Actividades recreativas y shows de magia. Pelotero libre.<br>
+                                Sorpresitas a base de golosinas.<br>
+                        </figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure>
+                            <figcaption><strong>"Aventura cósmica"</strong>
+                                <p>Av. San Martín 3582 (Paternal)</p>
+                            </figcaption>
+                            <img src="./Imagenes/8-salon-defabula.png" class="d-block w-100" alt="Aventura cósmica">
+                            <p class="desc-serv"> Capacidad para 100 personas, incluye juegos de agua y aire libre.<br>
+                                Tres animadores. Actividades didácticas.<br>
+                                Sorpresitas a base de golosinas<br>
+                            </p>
+                        </figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure>
+                            <figcaption><strong>"Jardín de estrellas"</strong>
+                                <p>V. Gomez 3706 (Almagro)</p>
+                            </figcaption>
+                            <img src="./Imagenes/a-los-canos-cumpleanos-infantil.webp" class="d-block w-100" alt="Jardín	de estrellas">
+                            <p class="desc-serv">Capacidad para 150 personas, taller de arte,  y actividades guiadas.<br>
+                                Cuatro animadores. Toro mecánico. Pista de baile.<br>
+                                Souvenirs personalizados<br>
+                            </p>
+                        </figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure>
+                            <figcaption><strong>"Jungla de diversión"</strong>
+                                <p>Talcahuano 1225 (Barrio Norte)</p>
+                            </figcaption>
+                            <img src="./Imagenes/selva.jpg" class="d-block w-100" alt="Jungla de diversión">
+                            <p class="desc-serv">Capacidad para 180 personas, sala de juegos interactivos, fútbol y pelotero.<br>
+                                Cinco animadores. Laberinto en altura. <br>
+                                Souvenirs personalizados<br>
+                            </p>
+                        </figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure>
+                            <figcaption><strong>"Mundo mágico"</strong>
+                                <p>Lafinur 2082 (Palermo)</p>
+                            </figcaption>
+                            <img src="./Imagenes/maquillaje.jpg" class="d-block w-100" alt="Mundo mágico">
+                            <p class="desc-serv">Capacidad para 200 personas, maquillaje artístico, disfraces.<br>
+                                Cinco animadores. Consola musical.<br>
+                                Souvenirs personalizados<br>
+                            </p>
+                        </figure>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div> 
+        </section>
 
     </main>
     <footer>
@@ -108,6 +128,7 @@
     </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
 </body>
 </html>

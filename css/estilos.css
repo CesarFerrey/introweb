@@ -364,8 +364,9 @@ nav {
 }
 
 #catalogo-salones{
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 16px;
   align-items: center;
 }
@@ -380,5 +381,8 @@ nav {
 
 #catalogo-salones img:hover {
   transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+#carouselExampleFade{
+  grid-column: 2/3;
 }
   
