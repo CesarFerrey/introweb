@@ -38,8 +38,8 @@
   .header-container {
     display: flex;
     flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
     text-align: center;
     gap: 20px; /* Espaciado entre el título y el nav */
 }
@@ -66,10 +66,9 @@ nav {
   }
   
   nav li {
-    display: inline-block;
+  display: inline-block;
     margin: 0;
   }
-
 
   nav a {
     color :#5c595a;
@@ -317,10 +316,12 @@ nav {
     background-color: #f4d7ec;
     margin-top: 30px;
   }
+
   main section h1,h3, h3+p{
     text-align: center;
     
   }
+
   main section{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
@@ -341,38 +342,55 @@ nav {
   margin: 15px auto;
  }
  
-  img{
+  /*img{
     max-width: 100%;
- 
     min-height:400px;
+    border-radius: 15px; 
+    transition: transform 0.3s ease; 
+  }*/
+  
+  .salon {
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen y la descripción estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    width: 100%; 
+}
 
-    border-radius: 15px; /* Bordes redondeados */
+
+.salon img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Alto fijo */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px; /* Bordes redondeados */
     transition: transform 0.3s ease; /* Transición suave para efectos */
-  }
+}
+
   img:hover{
     border-color: aqua;
     border-style: solid;
   }
+  
   .desc-serv {
+    width: 100%; /* Asegura que la descripción ocupe el mismo ancho que la imagen */
     background-color: #c2def5; /* Fondo morado claro */
     font-style: normal; /* Fuente normal */
-    padding: 15px; /* Espaciado interno */
+    padding: 10px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
     color: #333; /* Color del texto */
     text-align: justify; /* Justifica el texto */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
-#catalogo-salones{
-  width: 100%;
+#catalogo-salones {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 16px;
-  align-items: center;
-}
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  padding: 20px;
+}*/
 
 #catalogo-salones img {
-  width: 300px; /* Ancho fijo */
+  width: 100px; /* Ancho fijo */
   height: 200px; /* Alto fijo */
   object-fit: cover; /* Ajusta la imagen sin deformarla */
   border-radius: 10px; /* Bordes redondeados opcionales */
@@ -382,7 +400,8 @@ nav {
 #catalogo-salones img:hover {
   transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
-#carouselExampleFade{
+
+/*#carouselExampleFade{
   grid-column: 2/3;
-}
+}*/
   
