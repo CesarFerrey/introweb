@@ -250,7 +250,8 @@ nav.navbar a:hover {
   footer {
     text-align: center;
     padding: 15px;
-    background-color: #648edd57;
+    background-color: 
+    #648edd57;
     background-color: #f4d7ec;
     margin-top: 30px;
   }
@@ -280,13 +281,7 @@ nav.navbar a:hover {
   margin: 15px auto;
   
  }
- 
-  /*img{
-    max-width: 100%;
-    min-height:400px;
-    border-radius: 15px; 
-    transition: transform 0.3s ease; 
-  }*/
+
   
   .salon {
     display: flex;
@@ -316,7 +311,7 @@ nav.navbar a:hover {
     font-style: normal; 
     padding: 10px;
     border-radius: 10px; 
-    color: #333; /
+    color: #333; 
     text-align: center; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
@@ -340,7 +335,5 @@ nav.navbar a:hover {
   transform: scale(1.05); 
 }
 
-/*#carouselExampleFade{
-  grid-column: 2/3;
-}*/
+
   
