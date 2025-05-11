@@ -48,40 +48,39 @@
     text-decoration: underline;
   }
   
-/*==================NAV=====================================*/
-
-nav {
+/* En lugar de usar solo "nav", usa "nav.navbar" */
+nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-  }
-  
-  nav li {
+nav.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+nav.navbar li {
   display: inline-block;
-    margin: 0;
-  }
+  margin: 0;
+}
 
-  nav a {
-    color :#5c595a;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    text-decoration: none;
-  }
+nav.navbar a {
+  color: #5c595a;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
 
-  nav a:hover {
-    text-decoration: underline;
-    color: #c503bb;
-  }
-  
+nav.navbar a:hover {
+  text-decoration: underline;
+  color: #c503bb;
+}
+
   /* Hero (Inicio) */
   .hero {
     text-align: center;
