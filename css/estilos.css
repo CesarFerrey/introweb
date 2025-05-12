@@ -337,7 +337,16 @@ nav.navbar a:hover {
     align-items: center;
     justify-content: center;
 }
-
+.conlogo{
+  display: flex;
+  height: 100px;
+}
+.logo {
+    max-width: 100px;
+    min-height: 100px;
+    border-radius: 15px;
+    transition: transform 0.3sease;
+}
 /*
 #catalogo-salones {
   display: grid;
