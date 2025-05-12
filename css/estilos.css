@@ -4,41 +4,84 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+  /*====================Body====================*/
+
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f1e7ef;
+    background-color: #e9f1e7;
     color: #181717;
     line-height: 1.6;
     padding: 10px;
     text-align: center;
   }
   
-  /* Header */
+  /*=================Header======================== */
+  
   header {
-    background-color: #648edd57;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url(../Imagenes/pasteles.jpg);
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #464343;
     padding: 20px;
     text-align: center;
-  }
-  
+    height: 300%;
+}
+
   header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
   }
-  
-  nav ul {
-    list-style: none;
+
+  .header-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    gap: 20px; 
+}
+
+  header li a :hover {
+    text-decoration: underline;
   }
   
-  nav a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-  }
-  
+/* En lugar de usar solo "nav", usa "nav.navbar" */
+nav.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+nav.navbar li {
+  display: inline-block;
+  margin: 0;
+}
+
+nav.navbar a {
+  color: #5c595a;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+nav.navbar a:hover {
+  text-decoration: underline;
+  color: #c503bb;
+}
+
   /* Hero (Inicio) */
   .hero {
     text-align: center;
@@ -177,106 +220,48 @@
    QUIÉNES SOMOS
 ==================== */
 
-.institucional {
-  padding: 60px 0;
-  background-color: #fff;
-  text-align: center;
-}
-
-.institucional h2 {
-  color: #d81b60;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-.institucional p {
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto 30px;
-  color: #555;
-  line-height: 1.8;
-}
-
-/* Equipo */
-.equipo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.miembro {
-  width: 250px;
+/* Personalización suave sobre Bootstrap */
+.miembro-custom {
   background-color: #ffe6f0;
   border-radius: 20px;
-  padding: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
   transition: transform 0.3s;
 }
 
-.miembro:hover {
+.miembro-custom:hover {
   transform: translateY(-5px);
 }
 
-.miembro img {
+.miembro-custom img {
   height: 100px;
-  border-radius: 50px;
+  width: 100px;
   object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 15px;
 }
 
-.miembro h4 {
-  color: #d81b60;
-  margin-bottom: 5px;
-}
-
-.miembro p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-/* Misión y Visión */
-.mision-vision {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-.bloque {
-  width: 300px;
+.bloque-custom {
   background-color: #fff0f5;
-  padding: 25px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.bloque h3 {
-  color: #f06292;
-  margin-bottom: 10px;
-}
-
-.bloque p {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
-}
 
   /* Footer */
   footer {
     text-align: center;
     padding: 15px;
-    background-color: #648edd57;
+    background-color: 
+    #648edd57;
     background-color: #f4d7ec;
     margin-top: 30px;
   }
+
   main section h1,h3, h3+p{
     text-align: center;
     
   }
+
   main section{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
@@ -285,30 +270,137 @@
     padding: 10px 2%;
     margin-bottom: 10px;
   }
-  section ol{
-    margin-left: 6%;
-  }
-  section ol li{
+  
+  section figure{
     text-align: center;
     display: inline-block;
-    width: 45%;
+    width: 100%;
     margin:5px 1%;
   }
+
  figcaption{
   margin: 15px auto;
+  
  }
+ 
   img{
     max-width: 100%;
-    min-height: 550px;
-    
+    min-height:400px;
+    border-radius: 15px; 
+    transition: transform 0.3s ease; 
   }
+  
+  /*.salon {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%; 
+}*/
+
+.salon {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+  background-color: #f9f9f9; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 30px;
+  padding: 10px;
+  height: 100%;
+}
+
+/*.salon img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 10px; 
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}*/
+
   img:hover{
     border-color: aqua;
     border-style: solid;
   }
-  .desc-serv{
-    background-color: #ccc;
-    font-style: italic;
-  }
-
   
+  .desc-serv {
+    width: 100%;
+    height:auto;
+    min-height: 150px;
+    background-color: #c2def5; 
+    padding: 15px;
+    border-radius: 10px; 
+    color: #333; 
+    text-align:center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conlogo{
+  display: flex;
+  height: 100px;
+}
+.logo {
+    max-width: 100px;
+    min-height: 100px;
+    border-radius: 15px;
+    transition: transform 0.3sease;
+}
+/*
+#catalogo-salones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  padding: 20px;
+}*/
+
+#catalogo-salones{
+  width: 90%;
+}
+#catalogo-salones img {
+  width: 100px;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 10px; 
+  transition: transform 0.3s ease; 
+}
+
+#catalogo-salones img:hover {
+  transform: scale(1.05); 
+}
+
+/*#carouselExampleFade{
+  grid-column: 2/3;
+}*/
+  
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+#Bienvenidos {
+  background-color:#f4d7ec;
+  padding: 20px; 
+  border-radius: 10px; 
+}
+
+#Bienvenidos h2 {
+  font-size: 2rem; 
+  color: #333;
+}
+
+#Bienvenidos p {
+  font-size: 1rem; 
+  line-height: 1; 
+  color: #555; 
+}
