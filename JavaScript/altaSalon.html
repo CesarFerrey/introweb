@@ -16,7 +16,7 @@
     </header>
     
     <main class="container">
-        <form action="/submitSalon" method="POST" class="bg-light p-4 rounded shadow">
+        <form id="loginForm" action="/submitSalon" method="POST" class="bg-light p-4 rounded shadow">
             <div class="mb-3">
                 <label for="nombreSalon" class="form-label">Nombre del Salón:</label>
                 <input type="text" id="nombreSalon" name="nombreSalon" class="form-control" placeholder="Ingresa el nombre del salón" required>
@@ -32,8 +32,23 @@
             <button type="submit" class="btn btn-success w-100">Registrar Salón</button>
         </form>
     </main>
-    <footer class="text-center mt-4">
-        <p>&copy; 2025 - Todos los derechos reservados.Visite nuestras redes sociales!</p>
+
+    <h3 class="mt-5"> Lista de Salones </h3>
+    <table class="table table-striped mt-3" id="tablaSalones">
+        <thead>
+            <tr>
+                <th>Nombre Salón</th>
+                <th>Dirección</th>
+                <th>Capacidad</th>
+            </tr>
+        </thead>
+    
+        <tbody id="salonList">
+            <!-- Aquí se agregarán los salones mediante JavaScript -->
+        </tbody>
+    </table>
+    <footer class="text-center mt-4 bg-primary text-white py-3">
+        <p>&copy; 2025 - Todos los derechos reservados. Visite nuestras redes sociales!</p>
     </footer>
     <script src="./altaSalon.js"></script>
 </body>
