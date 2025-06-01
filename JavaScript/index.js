@@ -1,4 +1,4 @@
-function mostrarSalonesIndex(salones){
+/*function mostrarSalonesIndex(salones){
     const catalogoSalones= document.getElementById('contenedor-de-salones');// creo que se necesita para mandarlo
     salones.forEach((salon => {
         const grillaSalon = document.createElement("div");
@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () =>{
         
     }
 });
-
-/*function mostrarSalonesenIndex() {
+*/
+function mostrarSalonesenIndex() {
     const catalogoSection = document.querySelector("#catalogo-salones");
     // Limpiar contenido anterior
     catalogoSection.innerHTML = `
@@ -72,4 +72,4 @@ document.addEventListener("DOMContentLoaded", () =>{
         row.appendChild(div);
     });
 }
-mostrarSalonesenIndex();*/
+mostrarSalonesenIndex();

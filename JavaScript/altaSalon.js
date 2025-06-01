@@ -3,7 +3,7 @@ function mostrarSalones() {
     tablaBody.innerHTML = ""; // Limpiar la tabla antes de mostrar los salones
     const salones = JSON.parse(localStorage.getItem("salones")) || [];
     let id=0;
-    salones.forEach((salon => {
+    salones.forEach((salon, index) => {
         const fila = document.createElement("tr");
         fila.innerHTML = `
             <td>${salon.nombre}</td>
@@ -16,9 +16,8 @@ function mostrarSalones() {
             <button class="btn btn-sm btn-primary me-2" onclick="editarSalon('${index}')">Editar</button>
         `;
         id++;
-        console.log(id)
         tablaBody.appendChild(fila);
-    }));
+    });
     if (salones.length === 0) {
         const fila = document.createElement("tr");
         fila.innerHTML = `<td colspan="6" class="text-center">No hay salones cargados aún</td>`;
@@ -63,13 +62,14 @@ document.addEventListener("DOMContentLoaded", () =>{
     const salir = document.getElementById("logout");
     salir.addEventListener("click", () => {
         sessionStorage.clear();
-        window.location.href = "login.html";
+        window.location.href = "../index.html";//para mi tiene que ir al index para que se vean los cambios
     });
 
     // Mostrar u ocultar botones de sesión
-    if (loginBtn && logoutBtn) {
+    const loginBtn = document.getElementById("login");
+    if (loginBtn && salir) {
         loginBtn.style.display = "none";
-        logoutBtn.style.display = "block";
+        salir.style.display = "block";
     }
 });
 
