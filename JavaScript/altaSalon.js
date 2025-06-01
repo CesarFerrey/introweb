@@ -11,7 +11,6 @@ function mostrarSalones() {
             <td>${salon.capacidad}</td>
             <td>${salon.servicios}</td>
             <td>${salon.imagen}</td>
-            <td><button class="eliminar" data-index=${id}> eliminar</button> </td>
             <button class="btn btn-danger" onclick="eliminarSalon('${index}')">Eliminar</button>
             <button class="btn btn-sm btn-primary me-2" onclick="editarSalon('${index}')">Editar</button>
         `;
@@ -75,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 
 const tablaBody=document.querySelector("#tablaSalones tbody");
+/*
 tablaBody.addEventListener('click', function (e) {
     if (e.target.classList.contains('eliminar')) {
         const salones = JSON.parse(localStorage.getItem("salones")) || [];
@@ -84,7 +84,7 @@ tablaBody.addEventListener('click', function (e) {
         mostrarSalones(); // carga de vuelta los salones
     }
 });
-
+*/
     
 
 function editarSalon(index){
@@ -94,6 +94,9 @@ function editarSalon(index){
     document.getElementById("nombreSalon").value = salon.nombre;
     document.getElementById("direccion").value = salon.direccion;
     document.getElementById("capacidad").value = salon.capacidad;
+    document.getElementById("servicios").value = salon.servicios;
+    document.getElementById("imagen-salon").value = salon.imagen;
+
     
     salones.splice(index, 1);
     localStorage.setItem("salones", JSON.stringify(salones));

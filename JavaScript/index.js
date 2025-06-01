@@ -35,17 +35,17 @@
         catalogoSalones.appendChild(grillaSalon);
     }));   
 }
+*/
 document.addEventListener("DOMContentLoaded", () =>{
     const salonesGuardados = JSON.parse(localStorage.getItem("salones")) || [] ; //chequeamos qué tiene el storage
     if (salonesGuardados.length>0){
-        mostrarSalonesIndex(salonesGuardados)
+        mostrarSalonesenIndex();
     }else{
-        const cartel = document.getElementById('contenedor-de-salones');
-        cartel.innerHTML = "<p>Aún no se han cargado elementos</p>";
+        const cartel = document.getElementById('catalogo-salones');
+        cartel.innerHTML = "<p>Aún no se han cargado salones. Si sos administrador ingresá a tu sesión para cargarlos</p>";
         
     }
 });
-*/
 function mostrarSalonesenIndex() {
     const catalogoSection = document.querySelector("#catalogo-salones");
     // Limpiar contenido anterior
