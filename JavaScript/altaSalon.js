@@ -12,6 +12,8 @@ function mostrarSalones() {
             <td>${salon.servicios}</td>
             <td>${salon.imagen}</td>
             <td><button class="eliminar" data-index=${id}> eliminar</button> </td>
+            <button class="btn btn-danger" onclick="eliminarSalon('${index}')">Eliminar</button>
+            <button class="btn btn-sm btn-primary me-2" onclick="editarSalon('${index}')">Editar</button>
         `;
         id++;
         console.log(id)
@@ -63,6 +65,12 @@ document.addEventListener("DOMContentLoaded", () =>{
         sessionStorage.clear();
         window.location.href = "login.html";
     });
+
+    // Mostrar u ocultar botones de sesión
+    if (loginBtn && logoutBtn) {
+        loginBtn.style.display = "none";
+        logoutBtn.style.display = "block";
+    }
 });
 
 
@@ -79,6 +87,26 @@ tablaBody.addEventListener('click', function (e) {
 
     
 
+function editarSalon(index){
+    const salones = JSON.parse(localStorage.getItem("salones")) || [];
+    const salon = salones[index];
+    
+    document.getElementById("nombreSalon").value = salon.nombre;
+    document.getElementById("direccion").value = salon.direccion;
+    document.getElementById("capacidad").value = salon.capacidad;
+    
+    salones.splice(index, 1);
+    localStorage.setItem("salones", JSON.stringify(salones));
+    
+    mostrarSalones();
+}
+function eliminarSalon(index) {
+    console.log("Eliminando salón con índice:", index);
+    const salones = JSON.parse(localStorage.getItem("salones")) || [];
+    salones.splice(index, 1); // Elimina el salón del array
+    localStorage.setItem("salones", JSON.stringify(salones)); // Actualiza el localStorage
+    mostrarSalones(); // Actualiza la tabla
+}
 
 
 
