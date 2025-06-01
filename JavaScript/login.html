@@ -62,29 +62,8 @@
         <p>&copy; 2025 - Todos los derechos reservados. Viste nuestras redes sociales!</p>
     </footer>
 
-<script>
-    if (sessionStorage.getItem("usuario"))  {
-    alert("Este usuario ya está logueado")
-    window.location.href = "altaSalon.html";
-    }
+<script src="./login.js">
     
-    document.getElementById("loginForm").addEventListener("submit",function(event){
-        event.preventDefault(); 
-
-    // Obtenemos los valores de usuario y contraseña
-        const usuario = document.getElementById("usuario").value;
-        const contraseña = document.getElementById("contraseña").value;
-
-    // Verifica si los campos están vacíos
-        if (usuario === "admin" && contraseña === "1234") {
-    
-        sessionStorage.setItem("usuario", usuario);
-        alert("Login exitoso");
-        window.location.href = "altaSalon.html";
-        } else {
-            alert("Usuario o contraseña incorrectos");
-        }
-    });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
