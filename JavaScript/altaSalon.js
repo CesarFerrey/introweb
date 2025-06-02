@@ -1,4 +1,5 @@
-function mostrarSalones() {
+const tablaBody=document.querySelector("#tablaSalones tbody");   
+function mostrarSalones() { //este muestra los salones en la lista
     const tablaBody=document.querySelector("#tablaSalones tbody");
     tablaBody.innerHTML = ""; // Limpiar la tabla antes de mostrar los salones
     const salones = JSON.parse(localStorage.getItem("salones")) || [];
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     const salir = document.getElementById("logout");
     salir.addEventListener("click", () => {
         sessionStorage.clear();
-        window.location.href = "../index.html";//para mi tiene que ir al index para que se vean los cambios
+        window.location.href = "../index.html";//para mi tiene que ir al index para que se vean los cambios que se hicieron.
     });
 
     // Mostrar u ocultar botones de sesión
@@ -73,36 +74,19 @@ document.addEventListener("DOMContentLoaded", () =>{
 });
 
 
-const tablaBody=document.querySelector("#tablaSalones tbody");
-/*
-tablaBody.addEventListener('click', function (e) {
-    if (e.target.classList.contains('eliminar')) {
-        const salones = JSON.parse(localStorage.getItem("salones")) || [];
-        const index = e.target.dataset.index; //encuentra el indice del salon a eliminar
-        salones.splice(index, 1); // Elimina el salon
-        localStorage.setItem('salones', JSON.stringify(salones)); // Actualiza el local storage
-        mostrarSalones(); // carga de vuelta los salones
-    }
-});
-*/
-    
-
 function editarSalon(index){
     const salones = JSON.parse(localStorage.getItem("salones")) || [];
     const salon = salones[index];
-    
     document.getElementById("nombreSalon").value = salon.nombre;
     document.getElementById("direccion").value = salon.direccion;
     document.getElementById("capacidad").value = salon.capacidad;
     document.getElementById("servicios").value = salon.servicios;
     document.getElementById("imagen-salon").value = salon.imagen;
-
-    
     salones.splice(index, 1);
     localStorage.setItem("salones", JSON.stringify(salones));
-    
     mostrarSalones();
 }
+
 function eliminarSalon(index) {
     console.log("Eliminando salón con índice:", index);
     const salones = JSON.parse(localStorage.getItem("salones")) || [];
