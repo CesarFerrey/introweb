@@ -1,22 +1,38 @@
-if (sessionStorage.getItem("usuario"))  {
-    alert("Este usuario ya está logueado")
+// Si ya hay un usuario logueado, lo redirige
+if (sessionStorage.getItem("accessToken")) {
+    alert("Este usuario ya está logueado");
     window.location.href = "altaSalon.html";
-    }
-    
-    document.getElementById("loginForm").addEventListener("submit",function(event){
-        event.preventDefault(); 
+}
 
-    // Obtenemos los valores de usuario y contraseña
-        const usuario = document.getElementById("usuario").value;
-        const contraseña = document.getElementById("contraseña").value;
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    // Verifica si los campos están vacíos
-        if (usuario === "admin" && contraseña === "1234") {
-    
-        sessionStorage.setItem("usuario", usuario);
+    const usuario = document.getElementById("usuario").value;
+    const contraseña = document.getElementById("contraseña").value;
+
+    // Enviar los datos a la API de DummyJSON
+    fetch("https://dummyjson.com/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            username: usuario,
+            password: contraseña
+        })
+    })
+    .then(res => {
+        if (!res.ok) {
+            throw new Error("Usuario o contraseña incorrectos");
+        }
+        return res.json();
+    })
+    .then(data => {
+        // Guardamos el accessToken y el usuario
+        sessionStorage.setItem("accessToken", data.token);
+        sessionStorage.setItem("usuario", data.username);
         alert("Login exitoso");
         window.location.href = "altaSalon.html";
-        } else {
-            alert("Usuario o contraseña incorrectos");
-        }
+    })
+    .catch(error => {
+        alert(error.message);
     });
+});
