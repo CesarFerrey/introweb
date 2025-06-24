@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="../css/estilos.css" />
+</head>
+<body>
+  <h1>Gestión de Usuarios</h1>
+
+  <form id="formUsuario">
+    <input type="hidden" id="id" />
+    <input type="text" id="firstName" placeholder="Nombre" required />
+    <input type="text" id="lastName" placeholder="Apellido" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <button type="submit">Guardar</button>
+  </form>
+
+  <table id="tablaUsuarios" border="1">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nombre</th><th>Apellido</th><th>Email</th><th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="../JavaScript/usuario.js"></script>
+</body>
+</html>
+
