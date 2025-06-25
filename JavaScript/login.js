@@ -1,4 +1,4 @@
-// Si ya hay un usuario logueado, lo redirige
+
 if (sessionStorage.getItem("accessToken")) {
     alert("Este usuario ya está logueado");
     window.location.href = "altaSalon.html";
@@ -14,7 +14,7 @@ if (usuario === "administrador" && contraseña === "idw2025") {
     sessionStorage.setItem("accessToken", "admin-local-token");
     sessionStorage.setItem("usuario", "administrador");
     alert("Login administrador exitoso");
-    window.location.href = "usuarios.html"; // o "../pages/usuarios.html" si estás en subcarpeta
+    window.location.href = "usuarios.html"; 
     return; }
 
     // Enviar los datos a la API de DummyJSON
