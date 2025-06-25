@@ -13,6 +13,7 @@ fetch('https://dummyjson.com/users')
 
 function agregarFila(usuario) {
   const fila = document.createElement('tr');
+  fila.id = `fila${usuario.id}`;
   fila.innerHTML = `
     <td>${usuario.id}</td>
     <td>${usuario.firstName}</td>
@@ -33,19 +34,21 @@ form.addEventListener('submit', (e) => {
     lastName: inputApellido.value,
     email: inputEmail.value,
   };
-
-  if (inputId.value) {
-    fetch(`https://dummyjson.com/users/${inputId.value}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(usuario)
-    })
-      .then(res => res.json())
-      .then(() => {
-        alert('Usuario modificado');
-        location.reload();
-      });
-  } else {
+if (inputId.value) {
+  fetch(`https://dummyjson.com/users/${inputId.value}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(usuario)
+  })
+    .then(res => res.json())
+    .then(usuarioActualizado => {
+      alert('Usuario modificado');
+      actualizarFila(usuarioActualizado);
+      form.reset();
+      inputId.value = '';
+    });
+}
+   else {
 
     fetch('https://dummyjson.com/users/add', {
       method: 'POST',
@@ -60,6 +63,21 @@ form.addEventListener('submit', (e) => {
       });
   }
 });
+function actualizarFila(usuario) {
+  const fila = document.getElementById(`fila${usuario.id}`);
+  if (!fila) return;
+  fila.innerHTML = `
+    <td>${usuario.id}</td>
+    <td>${usuario.firstName}</td>
+    <td>${usuario.lastName}</td>
+    <td>${usuario.email}</td>
+    <td>
+      <button onclick="editar(${usuario.id}, '${usuario.firstName}', '${usuario.lastName}', '${usuario.email}')">Editar</button>
+      <button onclick="eliminar(${usuario.id})">Eliminar</button>
+    </td>
+  `;
+}
+
 
 function editar(id, nombre, apellido, email) {
   inputId.value = id;
@@ -76,7 +94,8 @@ function eliminar(id) {
       .then(res => res.json())
       .then(() => {
         alert('Usuario eliminado');
-        location.reload();
+        const fila = document.getElementById(`fila${id}`);
+        if (fila) fila.remove();
       });
   }
 }
