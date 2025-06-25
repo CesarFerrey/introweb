@@ -9,6 +9,13 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     const usuario = document.getElementById("usuario").value;
     const contraseña = document.getElementById("contraseña").value;
+  
+if (usuario === "administrador" && contraseña === "idw2025") {
+    sessionStorage.setItem("accessToken", "admin-local-token");
+    sessionStorage.setItem("usuario", "administrador");
+    alert("Login administrador exitoso");
+    window.location.href = "usuarios.html"; // o "../pages/usuarios.html" si estás en subcarpeta
+    return; }
 
     // Enviar los datos a la API de DummyJSON
     fetch("https://dummyjson.com/auth/login", {
