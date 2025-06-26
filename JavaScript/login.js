@@ -17,7 +17,7 @@ if (usuario === "administrador" && contraseña === "idw2025") {
     window.location.href = "usuarios.html"; 
     return; }
 
-    // Enviar los datos a la API de DummyJSON
+   
     fetch("https://dummyjson.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -33,7 +33,7 @@ if (usuario === "administrador" && contraseña === "idw2025") {
         return res.json();
     })
     .then(data => {
-        // Guardamos el accessToken y el usuario
+        
         sessionStorage.setItem("accessToken", data.token);
         sessionStorage.setItem("usuario", data.username);
         alert("Login exitoso");

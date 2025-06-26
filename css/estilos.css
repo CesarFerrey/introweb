@@ -48,7 +48,7 @@
     text-decoration: underline;
   }
   
-/* En lugar de usar solo "nav", usa "nav.navbar" */
+
 nav.navbar {
   display: flex;
   justify-content: center;
@@ -84,7 +84,7 @@ nav.navbar a:hover {
   color: #c503bb;
 }
 
-  /* Hero (Inicio) */
+  
   .hero {
     text-align: center;
     padding: 60px 20px;
@@ -111,7 +111,7 @@ nav.navbar a:hover {
     background-color: #ff85c1;
   }
   
-  /* Formularios */
+  
   form {
     max-width: 600px;
     margin: auto;
@@ -139,9 +139,7 @@ nav.navbar a:hover {
   button:hover {
     background-color: #ff85c1;
   }
-  /* ====================
-   SECCIÓN BENEFICIOS
-==================== */
+  
 
 .beneficios {
   background-color: #fff;
@@ -165,9 +163,7 @@ nav.navbar a:hover {
   margin: 10px 0;
 }
 
-/* ====================
-   SALONES DESTACADOS
-==================== */
+
 
 .salones {
   padding: 50px 0;
@@ -218,11 +214,8 @@ nav.navbar a:hover {
   font-size: 0.95rem;
 }
 
-/* ====================
-   QUIÉNES SOMOS
-==================== */
 
-/* Personalización suave sobre Bootstrap */
+
 .miembro-custom {
   background-color: #ffe6f0;
   border-radius: 20px;
@@ -249,7 +242,7 @@ nav.navbar a:hover {
 }
 
 
-  /* Footer */
+  
   footer {
     text-align: center;
     padding: 15px;
@@ -292,13 +285,7 @@ nav.navbar a:hover {
     transition: transform 0.3s ease; 
   }
   
-  /*.salon {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
-    width: 100%; 
-}*/
+  
 
 .salon {
   display: flex;
@@ -313,14 +300,7 @@ nav.navbar a:hover {
   height: 100%;
 }
 
-/*.salon img {
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover;
-    border-radius: 10px; 
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}*/
+
 
   img:hover{
     border-color: aqua;
@@ -352,13 +332,7 @@ nav.navbar a:hover {
     border-radius: 15px;
     transition: transform 0.3sease;
 }
-/*
-#catalogo-salones {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 20px; 
-  padding: 20px;
-}*/
+
 
 #catalogo-salones{
   width: 90%;
@@ -375,9 +349,7 @@ nav.navbar a:hover {
   transform: scale(1.05); 
 }
 
-/*#carouselExampleFade{
-  grid-column: 2/3;
-}*/
+
   
 .card {
   border-radius: 10px;
@@ -405,4 +377,40 @@ nav.navbar a:hover {
   font-size: 1rem; 
   line-height: 1; 
   color: #555; 
+}
+
+#resultadoPresupuesto {
+  background-color: #e9f7ef;
+  padding: 15px;
+  border: 1px solid #d4edda;
+  border-radius: 5px;
+}
+
+#presupuesto {
+  background-color:#f4d7ec; 
+  padding: 20px; 
+  border-radius: 10px;
+  margin-top: 30px; 
+  border: 1px solid #f5c6cb; 
+}
+
+
+#presupuesto h3 {
+  color: #050505; 
+  font-weight: bold;
+}
+
+
+#presupuesto button {
+  background-color:#ff69b4 ; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#presupuesto button:hover {
+  background-color:aqua ; 
 }

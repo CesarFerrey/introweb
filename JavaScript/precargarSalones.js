@@ -1,6 +1,6 @@
-const salonesMostrados = localStorage.getItem("salonesMostrados"); //bandera para que no precargue los salones estos si ya se mostraron la primera vez en el index (para que se reflejen las modificaciones de alta y baja de salones)
-if (!salonesMostrados){ //si es falso es porque hay que precargarlos
-    // Precargar salones
+const salonesMostrados = localStorage.getItem("salonesMostrados"); 
+if (!salonesMostrados){ 
+    
     const salones = [
         {
             nombre: "Universo bajito",
@@ -62,7 +62,7 @@ if (!salonesMostrados){ //si es falso es porque hay que precargarlos
 
     ];
 
-    // Sobrescribir los datos en localStorage
+   
     localStorage.setItem("salones", JSON.stringify(salones));
     const salonesMostrados = localStorage.setItem("salonesMostrados","true"); //bandera para que no cargue de nuevo los precargados
 }

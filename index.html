@@ -37,7 +37,7 @@
                 </li>
               </ul>
             </div>
-            <!-- Botón de Login -->
+           
             <a href="./pages/login.html" id="login" class="btn btn-primary">Iniciar Sesión</a>
           </div>
         </nav>
@@ -59,8 +59,48 @@
             <p>Consulte por la opción que más se ajuste a sus necesidades!</p>
         </section>
 
-    <section id="catalogo-salones" class="container my-5">
+        <section id="catalogo-salones" class="container my-5">
         <div id="salones-container" class="row">
+        </section>    
+
+
+        <section id="presupuesto" class="container my-5">
+            <h3 class="text-center mb-4">Generar Presupuesto</h3>
+            <form id="formPresupuesto">
+                <div class="mb-3">
+                <label for="salon" class="form-label">Seleccione un salón:</label>
+                <select id="salon" class="form-select" required>
+                    <option value="" disabled selected>Seleccione un salón</option>
+                    <option value="Universo bajito">Universo bajito</option>
+                    <option value="Luna llena">Luna llena</option>
+                    <option value="Aventura cósmica">Aventura cósmica</option>
+                    <option value="Jardín de estrellas">Jardín de estrellas</option>
+                    <option value="Jungla de diversión">Jungla de diversión</option>
+                    <option value="Mundo mágico">Mundo mágico</option>
+                    <option value="Luna de papel">Luna de papel</option>
+                    <option value="La máquina de jugar">La máquina de jugar</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cantidadPersonas" class="form-label">Cantidad de personas:</label>
+                    <input type="number" id="cantidadPersonas" class="form-control" placeholder="Ingrese la cantidad de personas" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="serviciosAdicionales" class="form-label">Servicios adicionales:</label>
+                    <select id="serviciosAdicionales" class="form-select" multiple>
+                      <option value="Animadores">Animadores</option>
+                      <option value="Souvenirs">Souvenirs</option>
+                      <option value="Inflables">Inflables</option>
+                      <option value="Shows de magia">Shows de magia</option>
+                      <option value="Karaoke">Karaoke</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Calcular Presupuesto</button>
+                </form>
+                <div id="resultadoPresupuesto" class="mt-4">
+                  
+
+
         <!--
                 <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
                         <figure>
@@ -161,6 +201,9 @@
                     </div>
                 </div>
                 -->
+                
+                    </div>
+                  </section>
             </div>
         </section>
 

@@ -8,12 +8,13 @@
 <body>
   <h1>Gestión de Usuarios</h1>
 
-  <form id="formUsuario">
+  <<form id="formUsuario">
     <input type="hidden" id="id" />
-    <input type="text" id="firstName" placeholder="Nombre" required />
-    <input type="text" id="lastName" placeholder="Apellido" required />
-    <input type="email" id="email" placeholder="Email" required />
+    <input type="text" id="firstName" placeholder="Nombre" required autocomplete="given-name" />
+    <input type="text" id="lastName" placeholder="Apellido" required autocomplete="family-name" />
+    <input type="email" id="email" placeholder="Email" required autocomplete="email" />
     <button type="submit">Guardar</button>
+  </form></button>
   </form>
 
   <table id="tablaUsuarios" border="1">
