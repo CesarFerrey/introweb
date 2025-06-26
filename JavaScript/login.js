@@ -36,9 +36,16 @@ if (usuario === "administrador" && contraseña === "idw2025") {
         
         sessionStorage.setItem("accessToken", data.token);
         sessionStorage.setItem("usuario", data.username);
+        sessionStorage.setItem("rol", data.role || "usuario");
         alert("Login exitoso");
-        window.location.href = "altaSalon.html";
-    })
+        if (data.role === "administrador") {
+            window.location.href = "usuarios.html"; // Redirigir a gestión de usuarios
+          } else {
+            window.location.href = "altaSalon.html"; // Redirigir al alta de salones
+          }
+        })
+       /* window.location.href = "altaSalon.html";
+    })*/
     .catch(error => {
         alert(error.message);
     });
