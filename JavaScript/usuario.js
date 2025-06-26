@@ -274,3 +274,26 @@ function eliminarUsuario(id) {
       .catch(error => console.error("Error al eliminar usuario:", error));
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const logoutButton = document.getElementById("logout");
+
+  if (logoutButton) {
+    logoutButton.addEventListener("click", function () {
+      sessionStorage.clear(); 
+
+      window.location.href = "../index.html";
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const salonButton = document.getElementById("salon");
+
+  if (salonButton) {
+    salonButton.addEventListener("click", function () {
+      // Redirige a la página de alta de salón
+      window.location.href = "../pages/altaSalon.html";
+    });
+  }
+});

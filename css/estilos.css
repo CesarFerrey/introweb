@@ -451,4 +451,15 @@ th, td {
 /* Opcional: resaltar fila al pasar el mouse */
 table tbody tr:hover {
   background-color: #f1f1f1;
+  
+}
+
+#tablaUsuarios {
+  width: 80%;
+  margin: 0 auto;        
+  border-collapse: collapse; 
+}
+#salon {
+  margin-left: auto; 
+  display: block;
 }
