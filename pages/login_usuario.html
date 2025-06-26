@@ -47,19 +47,16 @@
 
                 <form id="loginForm" action="/login" method="POST" class="bg-light p-4 rounded shadow">
 
-                    <title>Seleccionar tipo de acceso</title>
-  <script>
-    function seleccionarRol(rol) {
-      if (rol === 'admin') {
-        window.location.href = 'login_admin.html';
-      } else {
-        window.location.href = 'login_usuario.html';
-      }
-    }
-  </script>
-  <h2>¿Cómo desea ingresar?</h2>
-  <button onclick="seleccionarRol('admin')">Administrador</button>
-  <button onclick="seleccionarRol('usuario')">Usuario</button>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuario:</label>
+                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Ingresa tu usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contraseña" class="form-label">Contraseña:</label>
+                        <input type="password" id="contraseña" name="contraseña" class="form-control" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                </form>
                 
 
             </div>
@@ -69,7 +66,7 @@
         Las descripciones, fotografías, videos, narraciones de todas las publicaciones no pueden ser utilizadas sin previa autorización.</p>
         </footer>
 
-<script src="../JavaScript/login.js"></script>
+<script src="../JavaScript/login_usuario.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 </body>
