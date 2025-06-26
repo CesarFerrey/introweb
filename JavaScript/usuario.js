@@ -175,20 +175,7 @@ function listarUsuarios() {
 }
 
 
-function crearUsuario(usuario) {
-  fetch("https://dummyjson.com/users/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(usuario)
-  })
-      .then(res => res.json())
-      .then(data => {
-          alert("Usuario creado exitosamente");
-          listarUsuarios(); 
-      })
-      .catch(error => console.error("Error al crear usuario:", error));
-}
-
+/*emilyspass*/
 
 function cargarUsuario(id) {
   fetch(`https://dummyjson.com/users/${id}`)

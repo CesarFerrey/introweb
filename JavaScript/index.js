@@ -62,7 +62,7 @@ document.getElementById("formPresupuesto").addEventListener("submit", function (
       Souvenirs: 40000,
       Inflables: 30000,
       "Shows de magia": 50000,
-      Karaoke: 1000,
+      Karaoke: 20000,
     };
   
    
@@ -70,9 +70,6 @@ document.getElementById("formPresupuesto").addEventListener("submit", function (
     serviciosAdicionales.forEach(servicio => {
       costoTotal += preciosServicios[servicio] || 0;
     });
-  
-   
-    costoTotal += cantidadPersonas * 2000;
   
   
     const resultadoPresupuesto = document.getElementById("resultadoPresupuesto");
