@@ -175,7 +175,7 @@ function listarUsuarios() {
 }
 
 
-emilyspass
+/*emilyspass*/
 
 function cargarUsuario(id) {
   fetch(`https://dummyjson.com/users/${id}`)
