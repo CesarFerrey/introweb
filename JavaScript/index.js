@@ -41,7 +41,7 @@ document.getElementById("formPresupuesto").addEventListener("submit", function (
   
  
     const salon = document.getElementById("salon").value;
-    const cantidadPersonas = parseInt(document.getElementById("cantidadPersonas").value, 10);
+    
     const serviciosAdicionales = Array.from(document.getElementById("serviciosAdicionales").selectedOptions).map(option => option.value);
   
  
@@ -76,7 +76,6 @@ document.getElementById("formPresupuesto").addEventListener("submit", function (
     resultadoPresupuesto.innerHTML = `
       <h4>Presupuesto Calculado</h4>
       <p><strong>Salón:</strong> ${salon}</p>
-      <p><strong>Cantidad de personas:</strong> ${cantidadPersonas}</p>
       <p><strong>Servicios adicionales:</strong> ${serviciosAdicionales.join(", ") || "Ninguno"}</p>
       <p><strong>Costo total:</strong> $${costoTotal}</p>
     `;

@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salón de fiestas infantiles ENTRE AMIGOS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilos.css" />
     <link rel="icon" href="./Imagenes/logo-removebg-preview.png" type="image/x-icon">
- 
+
 </head>
+
 <body>
     <header class="bg-light py-3">
         <div class="container">
-          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 text-center text-md-start">
-            <img src="./Imagenes/logo-removebg-preview.png" class="img-fluid" style="max-height: 100px;" alt="Logo de empresa" />
-            <h1 class="mb-0">Salón de fiestas infantiles "Entre Amigos"</h1>
-          </div>
-        </div>
-      
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-          <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" href="./index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./pages/about.html">Institucional</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./pages/contact.html">Contacto</a>
-                </li>
-              </ul>
+            <div
+                class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 text-center text-md-start">
+                <img src="./Imagenes/logo-removebg-preview.png" class="img-fluid" style="max-height: 100px;"
+                    alt="Logo de empresa" />
+                <h1 class="mb-0">Salón de fiestas infantiles "Entre Amigos"</h1>
             </div>
-           
-            <a href="./pages/login.html" id="login" class="btn btn-primary">Iniciar Sesión</a>
-          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/about.html">Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="./pages/login.html" id="login" class="btn btn-primary">Iniciar Sesión</a>
+            </div>
         </nav>
-      </header>
-      
-        
+    </header>
+
+
     <main>
         <section id="Bienvenidos" class="container my-5">
 
-            <h2 class="text-center mb-4">Bienvenidos a nuestro espacio, donde la diversión y la alegría están garantizadas!</h2>
-            <p class="text-justify">Contamos con espacios pensados para eventos de niños y adolescentes. Ideales para celebrar cumpleaños, bautismos, babyshowers y eventos escolares.</p>
-            <p class="text-justify">Le ofrecemos la mejor animación, con juegos que permiten la destreza y despiertan la creatividad a través de la música, títeres, disfraces y más!</p>
-            <p class="text-justify">Contamos con un creativo equipo de profesionales que se encargará de que su evento sea inolvidable.</p>
-          
+            <h2 class="text-center mb-4">Bienvenidos a nuestro espacio, donde la diversión y la alegría están
+                garantizadas!</h2>
+            <p class="text-justify">Contamos con espacios pensados para eventos de niños y adolescentes. Ideales para
+                celebrar cumpleaños, bautismos, babyshowers y eventos escolares.</p>
+            <p class="text-justify">Le ofrecemos la mejor animación, con juegos que permiten la destreza y despiertan la
+                creatividad a través de la música, títeres, disfraces y más!</p>
+            <p class="text-justify">Contamos con un creativo equipo de profesionales que se encargará de que su evento
+                sea inolvidable.</p>
+
         </section>
 
         <section>
@@ -60,162 +69,60 @@
         </section>
 
         <section id="catalogo-salones" class="container my-5">
-        <div id="salones-container" class="row">
-        </section>    
+            <div id="salones-container" class="row">
+        </section>
 
 
         <section id="presupuesto" class="container my-5">
             <h3 class="text-center mb-4">Generar Presupuesto</h3>
-        <form id="formPresupuesto">
+            <form id="formPresupuesto">
                 <div class="mb-3">
-                <label for="salon" class="form-label">Seleccione un salón:</label>
-                <select id="salon" class="form-select" required>
-                    <option value="" disabled selected>Seleccione un salón</option>
-                    <option value="Universo bajito">Universo bajito</option>
-                    <option value="Luna llena">Luna llena</option>
-                    <option value="Aventura cósmica">Aventura cósmica</option>
-                    <option value="Jardín de estrellas">Jardín de estrellas</option>
-                    <option value="Jungla de diversión">Jungla de diversión</option>
-                    <option value="Mundo mágico">Mundo mágico</option>
-                    <option value="Luna de papel">Luna de papel</option>
-                    <option value="La máquina de jugar">La máquina de jugar</option>
+                    <label for="salon" class="form-label">Seleccione un salón:</label>
+                    <select id="salon" class="form-select" required>
+                        <option value="" disabled selected>Seleccione un salón</option>
+                        <option value="Universo bajito">Universo bajito</option>
+                        <option value="Luna llena">Luna llena</option>
+                        <option value="Aventura cósmica">Aventura cósmica</option>
+                        <option value="Jardín de estrellas">Jardín de estrellas</option>
+                        <option value="Jungla de diversión">Jungla de diversión</option>
+                        <option value="Mundo mágico">Mundo mágico</option>
+                        <option value="Luna de papel">Luna de papel</option>
+                        <option value="La máquina de jugar">La máquina de jugar</option>
                     </select>
-                  </div>
-                  <div class="mb-3">
-                    <label for="cantidadPersonas" class="form-label">Cantidad de personas:</label>
-                    <input type="number" id="cantidadPersonas" class="form-control" placeholder="Ingrese la cantidad de personas" required />
-                  </div>
-                  <div class="mb-3">
+                </div>
+
+                <div class="mb-3">
                     <label for="serviciosAdicionales" class="form-label">Servicios adicionales:</label>
                     <select id="serviciosAdicionales" class="form-select" multiple>
-                      <option value="Animadores">Animadores</option>
-                      <option value="Souvenirs">Souvenirs</option>
-                      <option value="Inflables">Inflables</option>
-                      <option value="Shows de magia">Shows de magia</option>
-                      <option value="Karaoke">Karaoke</option>
+                        <option value="Animadores">Animadores</option>
+                        <option value="Souvenirs">Souvenirs</option>
+                        <option value="Inflables">Inflables</option>
+                        <option value="Shows de magia">Shows de magia</option>
+                        <option value="Karaoke">Karaoke</option>
                     </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Calcular Presupuesto</button>
-                </form>
-                <div id="resultadoPresupuesto" class="mt-4">
-                  
-
-
-        <!--
-                <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
-                        <figure>
-                            <figcaption><strong>"Universo bajito"</strong>
-                                <p>Av. Acoyte 82 (Caballito)</p>
-                            </figcaption>  
-                            <img src="./Imagenes/Salon1.jpg"  class="d-block w-100" alt="Universo bajito">
-                            <p class="desc-serv">Capacidad para 30 personas, incluye dos animadores.<br>
-                                Inflable y metegol.Tobogán luminoso. <br>
-                                Souvenirs individuales.</p>
-                        </figure>
-                    
-                    </div>
-                    <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <figure>
-                            <figcaption><strong>"Luna llena" </strong>
-                                <p>Campana 2959 (Villa del Parque)</p>
-                            </figcaption>
-                            <img src="./Imagenes/Salon2.webp"class="d-block w-100" alt="Luna llena">
-                            <p class="desc-serv">Capacidad para 40 personas, incluye dos animadores. <br>
-                                Actividades recreativas y shows de magia. Pelotero libre.<br>
-                                Souvenirs individuales.<br>
-                        </figure>
-                    </div>
-                    <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <figure>
-                            <figcaption><strong>"Aventura cósmica"</strong>
-                                <p>Av. San Martín 3582 (Paternal)</p>
-                            </figcaption>
-                            <img src="./Imagenes/8-salon-defabula.png" class="d-block w-100" alt="Aventura cósmica">
-                            <p class="desc-serv"> Capacidad para 50 personas<br>
-                                Incluye tres animadores. <br> Actividades didácticas al aire libre.
-                                Sorpresitas a base de golosinas<br>
-                            </p>
-                        </figure>
-                    </div>
-                    <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <figure>
-                            <figcaption><strong>"Jardín de estrellas"</strong>
-                                <p>V. Gomez 3706 (Almagro)</p>
-                            </figcaption>
-                            <img src="./Imagenes/a-los-canos-cumpleanos-infantil.webp" class="d-block w-100" alt="Jardín de estrellas">
-                            <p class="desc-serv">Capacidad para 60 personas.<br>
-                                Talleres y visitas guiadas.
-                                Cuatro animadores. Toro mecánico. Pista de baile.
-                                Souvenirs personalizados<br>
-                            </p>
-                        </figure>
-                    </div>
-           
-                    <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <figure>
-                            <figcaption><strong>"Jungla de diversión"</strong>
-                                <p>Talcahuano 1225 (Barrio Norte)</p>
-                            </figcaption>
-                            <img src="./Imagenes/selva.jpg" class="d-block w-100" alt="Jungla de diversión">
-                            <p class="desc-serv">Capacidad para 80 personas.<br>
-                                Cinco animadores. Laberinto en altura. sala de juegos interactivos, fútbol y pelotero
-                                Souvenirs personalizados<br>
-                            </p>
-                        </figure>
-                    </div>
-                    <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <figure>
-                            <figcaption><strong>"Mundo mágico"</strong>
-                                <p>Lafinur 2082 (Palermo)</p>
-                            </figcaption>
-                            <img src="./Imagenes/maquillaje.jpg" class="d-block w-100" alt="Mundo mágico">
-                            <p class="desc-serv">Capacidad para 100 personas, maquillaje artístico, disfraces.<br>
-                                Cinco animadores. Consola musical.<br>
-                                Souvenirs personalizados<br>
-                            </p>
-                        </figure>
-                    </div>
-                    <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <figure>
-                            <figcaption><strong>"Luna de papel"</strong>
-                                <p>Chorroarín 2493 (Villa Urquiza)</p>
-                            </figcaption>
-                            <img src="./Imagenes/pasteles.jpg" class="d-block w-100" alt="Luna de papel">
-                            <p class="desc-serv">Capacidad para 120 personas. Sala de karaoke. Tobogán luminoso en altura.<br>
-                                Servicio de bebida libre.<br>
-                                Souvenirs premium.<br>
-                            </p>
-                        </figure>
-                    </div>
-                    <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <figure>
-                            <figcaption><strong>"La máquina de jugar"</strong>
-                                <p>Av. Avellaneda 3867 (Flores)</p>
-                            </figcaption>
-                            <img src="./Imagenes/Aventura cosmica.jpg" class="d-block w-100" alt="La máquina de jugar">
-                            <p class="desc-serv">Capacidad para 150 personas, Pista de baile. Pizza libre. Barra de bebidas. <br>
-                                Laberinto de colores.<br>
-                                Souvenirs premium.<br>
-                            </p>
-                        </figure>
-                    </div>
                 </div>
-                -->
-                
-                    </div>
-                  </section>
+                <button type="submit" class="btn btn-primary">Calcular Presupuesto</button>
+            </form>
+            <div id="resultadoPresupuesto" class="mt-4">
             </div>
+        </section>
+        </div>
         </section>
 
     </main>
     <footer class="bg-pink text-black text-center py-3">
-        <p>Salón de Fiestas Infantiles® es una Marca Registrada. Su contenido se encuentra protegido por las leyes de Derecho de Autor, &copy;Copyright 2007- 2025.
-            Las descripciones, fotografías, videos, narraciones de todas las publicaciones no pueden ser utilizadas sin previa autorización.</p>
+        <p>Salón de Fiestas Infantiles® es una Marca Registrada. Su contenido se encuentra protegido por las leyes de
+            Derecho de Autor, &copy;Copyright 2007- 2025.
+            Las descripciones, fotografías, videos, narraciones de todas las publicaciones no pueden ser utilizadas sin
+            previa autorización.</p>
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
     <script src="./JavaScript/index.js"></script>
     <script src="./JavaScript/precargarSalones.js"></script>
 </body>
+
 </html>

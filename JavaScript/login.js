@@ -39,13 +39,12 @@ if (usuario === "administrador" && contraseña === "idw2025") {
         sessionStorage.setItem("rol", data.role || "usuario");
         alert("Login exitoso");
         if (data.role === "administrador") {
-            window.location.href = "usuarios.html"; // Redirigir a gestión de usuarios
+            window.location.href = "usuarios.html"; 
           } else {
-            window.location.href = "altaSalon.html"; // Redirigir al alta de salones
+            window.location.href = "altaSalon.html"; 
           }
         })
-       /* window.location.href = "altaSalon.html";
-    })*/
+       
     .catch(error => {
         alert(error.message);
     });
