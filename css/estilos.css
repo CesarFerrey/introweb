@@ -414,3 +414,52 @@ nav.navbar a:hover {
 #presupuesto button:hover {
   background-color:aqua ; 
 }
+
+/* Aplica borde completo a la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Bordes en toda la tabla: celdas, filas y encabezados */
+table, th, td {
+  border: 1px solid black;
+}
+
+/* Espaciado y alineación del contenido */
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Estilo para los botones de Editar y Eliminar */
+.btn {
+  padding: 8px 12px;
+  margin: 2px;
+  border: none;
+  color: white;
+  background-color: hotpink;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Opcional: efecto al pasar el mouse */
+.btn:hover {
+  background-color: deeppink;
+}
+
+/* Opcional: resaltar fila al pasar el mouse */
+table tbody tr:hover {
+  background-color: #f1f1f1;
+  
+}
+
+#tablaUsuarios {
+  width: 80%;
+  margin: 0 auto;        
+  border-collapse: collapse; 
+}
+#salon {
+  margin-left: auto; 
+  display: block;
+}
