@@ -1,7 +1,7 @@
 const tablaBody=document.querySelector("#tablaSalones tbody");   
-function mostrarSalones() { //este muestra los salones en la lista
+function mostrarSalones() { 
     const tablaBody=document.querySelector("#tablaSalones tbody");
-    tablaBody.innerHTML = ""; // Limpiar la tabla antes de mostrar los salones
+    tablaBody.innerHTML = ""; 
     const salones = JSON.parse(localStorage.getItem("salones")) || [];
     let id=0;
     salones.forEach((salon, index) => {
@@ -29,8 +29,8 @@ function mostrarSalones() { //este muestra los salones en la lista
 
 
 document.addEventListener("DOMContentLoaded", () =>{
-    const salonesGuardados = JSON.parse(localStorage.getItem("salones")) || [] ; //chequeamos qué tiene el storage
-    // Verificar si el usuario está logueado: 
+    const salonesGuardados = JSON.parse(localStorage.getItem("salones")) || [] ; 
+  
     const usuario = sessionStorage.getItem("usuario");
     if(!usuario) {
         alert("Debe loguearse para realizar modificaciones en la página");
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     }
     mostrarSalones();
     
-    // Para manejar el formulario de alta de salón:
+  
     const form = document.getElementById("loginForm");
     
     form.addEventListener("submit", function(event) {
@@ -62,10 +62,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     const salir = document.getElementById("logout");
     salir.addEventListener("click", () => {
         sessionStorage.clear();
-        window.location.href = "../index.html";//para mi tiene que ir al index para que se vean los cambios que se hicieron.
+        window.location.href = "../index.html";
     });
 
-    // Mostrar u ocultar botones de sesión
+    
     const loginBtn = document.getElementById("login");
     if (loginBtn && salir) {
         loginBtn.style.display = "none";
@@ -90,9 +90,9 @@ function editarSalon(index){
 function eliminarSalon(index) {
     console.log("Eliminando salón con índice:", index);
     const salones = JSON.parse(localStorage.getItem("salones")) || [];
-    salones.splice(index, 1); // Elimina el salón del array
-    localStorage.setItem("salones", JSON.stringify(salones)); // Actualiza el localStorage
-    mostrarSalones(); // Actualiza la tabla
+    salones.splice(index, 1); 
+    localStorage.setItem("salones", JSON.stringify(salones)); 
+    mostrarSalones(); 
 }
 
 

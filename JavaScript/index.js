@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Mostrar los salones en el index
+  
     const salones = JSON.parse(localStorage.getItem("salones"));
     if (salones.length >0){
         mostrarSalonesenIndex(salones);
@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function mostrarSalonesenIndex(salones) {
     const salonesContainer = document.getElementById("salones-container");
 
-    // Limpiar contenido anterior
+  
     salonesContainer.innerHTML = "";
 
-    // Generar el contenido HTML para cada salón
+   
     salones.forEach(salon => {
         const salonHTML = `
             <div class="salon col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
@@ -35,3 +35,48 @@ function mostrarSalonesenIndex(salones) {
         salonesContainer.innerHTML += salonHTML;
     });
 }
+
+document.getElementById("formPresupuesto").addEventListener("submit", function (event) {
+    event.preventDefault();
+  
+ 
+    const salon = document.getElementById("salon").value;
+    
+    const serviciosAdicionales = Array.from(document.getElementById("serviciosAdicionales").selectedOptions).map(option => option.value);
+  
+ 
+    const preciosBase = {
+      "Universo bajito": 100000,
+      "Luna llena": 130000,
+      "Aventura cósmica": 140000,
+      "Jardín de estrellas": 160000,
+      "Jungla de diversión": 180000,
+      "Mundo mágico": 200000,
+      "Luna de papel": 230000,
+      "La máquina de jugar": 250000,
+    };
+  
+ 
+    const preciosServicios = {
+      Animadores: 50000,
+      Souvenirs: 40000,
+      Inflables: 30000,
+      "Shows de magia": 50000,
+      Karaoke: 20000,
+    };
+  
+   
+    let costoTotal = preciosBase[salon] || 0;
+    serviciosAdicionales.forEach(servicio => {
+      costoTotal += preciosServicios[servicio] || 0;
+    });
+  
+  
+    const resultadoPresupuesto = document.getElementById("resultadoPresupuesto");
+    resultadoPresupuesto.innerHTML = `
+      <h4>Presupuesto Calculado</h4>
+      <p><strong>Salón:</strong> ${salon}</p>
+      <p><strong>Servicios adicionales:</strong> ${serviciosAdicionales.join(", ") || "Ninguno"}</p>
+      <p><strong>Costo total:</strong> $${costoTotal}</p>
+    `;
+  });

@@ -1,4 +1,3 @@
-
 if (sessionStorage.getItem("accessToken")) {
     alert("Este usuario ya está logueado");
     window.location.href = "altaSalon.html";
@@ -9,13 +8,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     const usuario = document.getElementById("usuario").value;
     const contraseña = document.getElementById("contraseña").value;
-  
-if (usuario === "administrador" && contraseña === "idw2025") {
-    sessionStorage.setItem("accessToken", "admin-local-token");
-    sessionStorage.setItem("usuario", "administrador");
-    alert("Login administrador exitoso");
-    window.location.href = "usuarios.html"; 
-    return; }
 
    
     fetch("https://dummyjson.com/auth/login", {
@@ -36,15 +28,9 @@ if (usuario === "administrador" && contraseña === "idw2025") {
         
         sessionStorage.setItem("accessToken", data.token);
         sessionStorage.setItem("usuario", data.username);
-        sessionStorage.setItem("rol", data.role || "usuario");
         alert("Login exitoso");
-        if (data.role === "administrador") {
-            window.location.href = "usuarios.html"; 
-          } else {
-            window.location.href = "altaSalon.html"; 
-          }
-        })
-       
+        window.location.href = "altaSalon.html";
+    })
     .catch(error => {
         alert(error.message);
     });
